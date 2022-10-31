@@ -1,0 +1,72 @@
+@import 'set';
+@import 'sider';
+//banner內文開始
+
+
+main{
+
+    #container{
+        @include dimension(778px, 749px);
+        #swiper_tag{
+            @include flex-row(flex-start, center);
+            @include font(400, 16px, 19px, 0.1em);
+            margin-top: 28px;
+            div{
+                @include dimension(100px, 35px);
+                @include flex-row(center, center);
+                border-radius: 10px 10px 0px 0px;
+                border: 1px solid $border;
+                border-bottom: unset;
+            }
+            div:nth-of-type(1){
+                background-color: $logo_color;
+            }
+        }
+        #content{
+            @include dimension(100%, 749px);
+            border: 1px solid $border;
+            padding: 37px 0 0 34px;
+    
+            li {
+                @include font(400, 18px, 22px, 0.1em);
+                padding-bottom: 14px;
+            }
+            #web{
+                @include flex-row(flex-start, flex-end);
+                margin-bottom: 33px;
+                .box{
+                    @include dimension(500px, 298px);
+                    background-color: $bg;
+                    margin-right: 37px;
+                }
+                button{
+                    @include dimension(70px, 40px);
+                    @include font(400, 20px, 24px, 0.1em);
+                    background-color: $button;
+                    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+                    border: unset;
+                }
+            }
+            #phone{
+                @include flex-row(space-between, flex-end);
+                padding-right: 43px;
+                padding: 0 43px 29px 0;
+                .box{
+                    @include dimension(192px, 289px);
+                    background-color: $bg;
+                }
+                button{
+                    @include dimension(70px, 40px);
+                    @include font(400, 20px, 24px, 0.1em);
+                    background-color: $button;
+                    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+                    &:nth-last-of-type(1){
+                        background-color: $sub_color;
+                    }
+                    border: unset;
+                }
+            }
+        }
+    }
+    
+}

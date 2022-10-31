@@ -1,0 +1,31 @@
+@import 'set';
+
+main{
+    #note{
+        @include dimension(350px, 200px);
+        @include flex-col(center, center);
+        border-radius: 25px;
+        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+        background-color: #FFFFFF;
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        li{
+            @include font(400, 18px, 22px, 0.1em);
+        }
+        div{
+            @include flex-row(space-between, center);
+         
+            button {
+                @include dimension(50px, 30px);
+                box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+                background-color: $button;
+                margin: 21px;
+
+                &:nth-of-type(1) {
+                    background-color: $logo_color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+$logo_color: rgb(141, 215, 204);
+$sub_color: #EEB8AF;
+$bg: #D9D9D9;
+$button: #EFEFEF;
+$input: #F1F1F1;
+$border: #9C9C9C;
+
+@mixin dimension($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+// justify-content, align-items
+@mixin flex-col($main, $sub) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $main;
+    align-items: $sub;
+}
+
+@mixin flex-row($main, $sub) {
+    display: flex;
+    justify-content: $main;
+    align-items: $sub;
+}
+
+@mixin font($fw, $fz, $lh, $ls) {
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html, ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+input, button{
+    border: unset;
+}
+

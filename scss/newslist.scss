@@ -1,0 +1,66 @@
+@import 'set';
+@import 'sider';
+//newslist內文開始
+
+main {
+    #container {
+        @include dimension(778px, 749px);
+        margin-top: 6%;
+
+        #content {
+            @include flex-col(flex-start, flex-start);
+            @include dimension(1100px, 965px);
+            margin: 44px 0 132px;
+
+            .card {
+                @include dimension(984px, 244px);
+                @include flex-row(space-between, flex-start);
+                border: 1px solid black;
+                margin: 44px 0;
+
+                .img-area {
+                    @include dimension(333px, 240px);
+                    background-color: $bg;
+                }
+
+                .text-area {
+                    @include flex-col(center, center);
+                    @include font(400, 20px, 24px, 0.1em);
+                    margin: 46px 0 66px;
+
+                    li {
+                        @include dimension(396px, 27px);
+                        border-bottom: 1px solid black;
+
+                        &:nth-of-type(1) {
+                            border: unset;
+                            margin-bottom: 27px;
+                        }
+                    }
+                }
+
+                .button-area {
+                    @include flex-col(center, center);
+                    @include dimension(160px, 244px);
+
+                    button {
+                        @include dimension(70px, 40px);
+                        @include font(400, 18px, 22px, 0.1em);
+                        @include flex-row(center, center);
+                        border: unset;
+                        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+
+                        &:nth-last-of-type(1) {
+                            background-color: $sub_color;
+                            margin-top: 33px;
+                        }
+
+                        &:nth-of-type(1) {
+                            background-color: $logo_color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

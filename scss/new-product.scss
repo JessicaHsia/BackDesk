@@ -1,0 +1,105 @@
+@import 'set';
+@import 'sider';
+//new-product內文開始
+
+main {
+    #container {
+        @include dimension(778px, 749px);
+        margin-top: 3%;
+
+        #content {
+            .content-top {
+                @include flex-col(flex-start, flex-start);
+                @include dimension(780px, 575px);
+                border: 1px solid #9C9C9C;
+                margin: 26px 0 35px;
+
+                li {
+                    @include font(400, 18px, 22px, 0.1em);
+                    margin-left: 30px;
+
+                    span {
+                        color: red;
+                        font-size: 12px;
+                    }
+
+                    &:nth-of-type(1) {
+                        margin: 31px 0 19px 30px;
+                    }
+
+                    &:nth-of-type(2) {
+                        margin: 28px 0 15px 30px;
+                    }
+                }
+
+                input {
+                    @include font(400, 16px, 19px, 0.1em);
+                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    @include dimension(720px, 50px);
+                    margin-left: 30px;
+                    background-color: $input;
+
+                    &:nth-of-type(2) {
+                        @include dimension(720px, 200px);
+                        margin: 17px 0 28px 30px;
+                    }
+
+                    &:nth-last-of-type(1) {
+                        margin: 19px 0 30px 30px;
+                    }
+                }
+            }
+
+            .content-down {
+                @include flex-col(center, flex-start);
+
+                .img-area {
+                    @include flex-row(flex-start, flex-end);
+
+                    #web {
+                        @include dimension(283px, 206px);
+                        background-color: $bg;
+                        margin: 0 22px 0 20px;
+                    }
+
+                    button {
+                        @include dimension(70px, 40px);
+                        @include font(400, 20px, 24px, 0.1em);
+                        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+                        border: unset;
+                    }
+
+                    #phone {
+                        @include dimension(206px, 206px);
+                        background-color: $bg;
+                        margin: 0 22px 0 48px;
+                    }
+                }
+
+                .text-area {
+                    @include flex-row(flex-start, flex-start);
+                    margin: 26px 0 0 20px;
+
+                    li {
+                        @include dimension(343px, 22px);
+                        @include font(400, 18px, 22px, 0.1em);
+
+                        &:nth-last-of-type(1) {
+                            margin: 0 60px 109px 80px;
+                        }
+                    }
+
+                    button {
+                        @include dimension(70px, 40px);
+                        @include font(400, 20px, 24px, 0.1em);
+                        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+                        background-color: $sub_color;
+                        transform: translateY(-50%);
+                        border: unset;
+                    }
+                }
+            }
+
+        }
+    }
+}

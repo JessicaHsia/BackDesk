@@ -1,0 +1,40 @@
+@import 'set';
+
+//new-product內文開始
+
+main {
+    @include dimension(100%, 100vh);
+    @include flex-row(space-between, flex-start);
+
+    #sider {
+        @include flex-col(flex-start, center);
+        @include dimension(350px, 100vh);
+        background-color: $logo_color;
+        @include font(400, 20px, 24px, 0.1em);
+        position: fixed;
+        z-index: 99999;
+
+        ul {
+            &:nth-of-type(1) {
+                padding-top: 78px;
+            }
+
+            &:nth-last-of-type(1) {
+                padding-top: 39px;
+            }
+
+            li {
+                padding: 24px 0 15px 20px;
+            }
+        }
+    }
+
+    #container {
+        @include flex-col(center, flex-start);
+        transform: translate(60%, 23%);
+
+        #page_title {
+            @include font(400, 18px, 22px, 0.1em);
+        }
+    }
+}
