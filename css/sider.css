@@ -48,7 +48,12 @@ main #sider ul:nth-last-of-type(1) {
   padding-top: 39px;
 }
 main #sider ul li {
-  padding: 24px 0 15px 20px;
+  margin: 24px 0 15px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+main #sider ul li:hover {
+  border: 1px solid white;
 }
 main #container {
   display: flex;

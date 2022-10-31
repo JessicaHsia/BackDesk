@@ -6,64 +6,84 @@ main {
     #container {
         @include dimension(778px, 749px);
         margin-top: 1%;
+
         #content {
             @include flex-row(space-between, flex-start);
             margin-top: 24px;
+
             .content-left {
                 @include dimension(778px, 870px);
                 border: 1px solid black;
 
                 li {
                     @include font(400, 18px, 22px, 0.1em);
-                    span{
+
+                    span {
                         color: red;
                     }
-                    &:nth-of-type(1){
+
+                    &:nth-of-type(1) {
                         margin: 31px 0 19px 30px;
                     }
-                    &:nth-of-type(2){
+
+                    &:nth-of-type(2) {
                         margin: 28px 0 21px 30px;
                     }
-                    &:nth-of-type(3){
+
+                    &:nth-of-type(3) {
                         margin: 28px 0 16px 30px
                     }
                 }
 
-                input{
+                input {
                     @include dimension(720px, 50px);
                     background-color: $input;
                     margin-left: 30px;
                     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-                    &:nth-last-of-type(1){
-                        @include dimension(720px, 530px);
-                        @include flex-row(flex-start, flex-start);
-                    }
+
                 }
+
+                textarea {
+                    @include dimension(720px, 530px);
+                    margin-left: 30px;
+                    background-color: $input;
+                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    font-size: 20px;
+                }
+
             }
 
-            .content-right{
+            .content-right {
                 @include dimension(375px, 100px);
                 margin: 0 180px 0 96px;
-                li{
+
+                li {
                     @include font(400, 18px, 22px, 0.1em);
-                    span{
+
+                    span {
                         color: red;
                     }
                 }
-                #web, #phone{
+
+                #web,
+                #phone {
 
                     @include flex-row(space-between, flex-end);
-                    .box{
+
+                    .box {
                         @include dimension(283px, 206px);
                         background-color: $bg;
-                        &:nth-of-type(1){
+
+                        &:nth-of-type(1) {
                             margin: 21px 0 26px;
                         }
-                        &:nth-of-type(2){
+
+                        &:nth-of-type(2) {
                             margin: 48px 0 26px;
                         }
                     }
-                    button{
+
+                    button {
                         @include dimension(70px, 40px);
                         @include font(400, 20px, 24px, 0.1em);
                         transform: translateY(-60%);
@@ -72,7 +92,8 @@ main {
                         background-color: $button;
                     }
                 }
-                button{
+
+                button {
                     @include dimension(70px, 40px);
                     @include font(400, 20px, 24px, 0.1em);
                     transform: translateY(-60%);

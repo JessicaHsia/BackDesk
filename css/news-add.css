@@ -126,12 +126,13 @@ main #container #content .content-left input {
   margin-left: 30px;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-main #container #content .content-left input:nth-last-of-type(1) {
+main #container #content .content-left textarea {
   width: 720px;
   height: 530px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  margin-left: 30px;
+  background-color: #F1F1F1;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
 }
 main #container #content .content-right {
   width: 375px;
@@ -147,23 +148,28 @@ main #container #content .content-right li {
 main #container #content .content-right li span {
   color: red;
 }
-main #container #content .content-right #web, main #container #content .content-right #phone {
+main #container #content .content-right #web,
+main #container #content .content-right #phone {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
-main #container #content .content-right #web .box, main #container #content .content-right #phone .box {
+main #container #content .content-right #web .box,
+main #container #content .content-right #phone .box {
   width: 283px;
   height: 206px;
   background-color: #D9D9D9;
 }
-main #container #content .content-right #web .box:nth-of-type(1), main #container #content .content-right #phone .box:nth-of-type(1) {
+main #container #content .content-right #web .box:nth-of-type(1),
+main #container #content .content-right #phone .box:nth-of-type(1) {
   margin: 21px 0 26px;
 }
-main #container #content .content-right #web .box:nth-of-type(2), main #container #content .content-right #phone .box:nth-of-type(2) {
+main #container #content .content-right #web .box:nth-of-type(2),
+main #container #content .content-right #phone .box:nth-of-type(2) {
   margin: 48px 0 26px;
 }
-main #container #content .content-right #web button, main #container #content .content-right #phone button {
+main #container #content .content-right #web button,
+main #container #content .content-right #phone button {
   width: 70px;
   height: 40px;
   font-weight: 400;
