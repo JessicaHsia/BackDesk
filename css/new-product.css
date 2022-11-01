@@ -62,6 +62,18 @@ main #sider {
   position: fixed;
   z-index: 99999;
 }
+main #sider img {
+  width: 150px;
+  height: 150px;
+  margin-top: 66px;
+}
+main #sider ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 150px;
+}
 main #sider ul:nth-of-type(1) {
   padding-top: 78px;
 }
@@ -69,7 +81,33 @@ main #sider ul:nth-last-of-type(1) {
   padding-top: 39px;
 }
 main #sider ul li {
-  padding: 24px 0 15px 20px;
+  margin: 10px 0 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+}
+main #sider ul li:nth-of-type(1):hover {
+  border: unset;
+}
+main #sider ul li:hover {
+  border: 1px solid white;
+}
+main #sider ul .log-out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 250px 0 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  padding: 5px;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+}
+main #sider ul .log-out:hover {
+  border: 1px solid white;
 }
 main #container {
   display: flex;
@@ -128,13 +166,20 @@ main #container #content .content-top input {
   margin-left: 30px;
   background-color: #F1F1F1;
 }
-main #container #content .content-top input:nth-of-type(2) {
+main #container #content .content-top input:nth-last-of-type(1) {
+  margin: 19px 0 30px 30px;
+}
+main #container #content .content-top textarea {
   width: 720px;
   height: 200px;
   margin: 17px 0 28px 30px;
-}
-main #container #content .content-top input:nth-last-of-type(1) {
-  margin: 19px 0 30px 30px;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #F1F1F1;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  border: unset;
 }
 main #container #content .content-down {
   display: flex;
@@ -153,15 +198,22 @@ main #container #content .content-down .img-area #web {
   background-color: #D9D9D9;
   margin: 0 22px 0 20px;
 }
-main #container #content .content-down .img-area button {
+main #container #content .content-down .img-area .input-file {
   width: 70px;
   height: 40px;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.1em;
+  transform: translateY(-60%);
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
-  border: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFEFEF;
+}
+main #container #content .content-down .img-area .input-file input {
+  display: none;
 }
 main #container #content .content-down .img-area #phone {
   width: 206px;

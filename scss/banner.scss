@@ -4,7 +4,6 @@
 
 
 main{
-
     #container{
         @include dimension(778px, 749px);
         #swiper_tag{
@@ -44,7 +43,18 @@ main{
                     @include font(400, 20px, 24px, 0.1em);
                     background-color: $button;
                     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
-                    border: unset;
+                    // border: unset;
+                }
+                .input-file {
+                    @include dimension(70px, 40px);
+                    @include font(400, 20px, 24px, 0.1em);
+                    transform: translateY(-60%);
+                    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+                    @include flex-row(center, center);
+                    background-color: $button;
+                    input{
+                        display: none;
+                    }
                 }
             }
             #phone{
@@ -64,6 +74,17 @@ main{
                         background-color: $sub_color;
                     }
                     border: unset;
+                }
+                .input-file {
+                    @include dimension(70px, 40px);
+                    @include font(400, 20px, 24px, 0.1em);
+                    transform: translateY(-60%);
+                    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+                    @include flex-row(center, center);
+                    background-color: $button;
+                    input{
+                        display: none;
+                    }
                 }
             }
         }

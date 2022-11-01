@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,40 +9,50 @@
     <link rel="stylesheet" href="./css/sider.css">
     <title>菓洞甜點工作室-新品上市</title>
 </head>
+
 <body>
 
     <main>
         <div id="sider">
-            <ul>首頁 >
+            <img src="./img/logo-bg-white.png" >
+            <ul>
+                <li>首頁 ></li> 
                 <li><a href="./banner.html">banner</a> </li>
                 <li>新品上市</li>
             </ul>
-            <ul>活動快訊 >
+            <ul>
+                <li>活動快訊 ></li>
                 <li><a href="./newslist.html">列表頁</a> </li>
                 <li><a href="./news-add.html">新增消息</a> </li>
-                <li><a href="./index.html">登出</a></li>
+                <a class="log-out" href="./index.html">登出後台</a>
             </ul>
         </div>
         <div id="container">
             <div id="page_title">
                 <span>首頁</span> / <span> 新品上市</span>
             </div>
-            <div id="content">
+            <form id="content">
                 <div class="content-top">
                     <li>新品名稱 <span>*</span></li>
-                    <input type="text">
+                    <input type="text" name="newproduct_name">
                     <li>內文 <span>*</span></li>
                     <li>! 建議行數在4行內</li>
-                    <input type="text">
+                    <textarea name="newproduct_textarea" cols="30" rows="10"></textarea>
                     <li>網址 <span>*</span></li>
-                    <input type="text">
+                    <input type="text" name="newproduct_address">
                 </div>
                 <div class="content-down">
                     <div class="img-area">
                         <div id="web"></div>
-                        <button>瀏覽</button>
+                        <label class="input-file">
+                            <input type="file" name="newsadd_webbtn">
+                            <span>瀏覽</span>
+                        </label>
                         <div id="phone"></div>
-                        <button>瀏覽</button>
+                        <label class="input-file">
+                            <input type="file" name="newsadd_webbtn">
+                            <span>瀏覽</span>
+                        </label>
                     </div>
                     <div class="text-area">
                         <li>！網頁版建議尺寸為 500px X 350 px</li>
@@ -49,9 +60,10 @@
                         <button>上傳</button>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
     </main>
-    
+
 </body>
+
 </html>

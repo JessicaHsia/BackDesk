@@ -62,6 +62,18 @@ main #sider {
   position: fixed;
   z-index: 99999;
 }
+main #sider img {
+  width: 150px;
+  height: 150px;
+  margin-top: 66px;
+}
+main #sider ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 150px;
+}
 main #sider ul:nth-of-type(1) {
   padding-top: 78px;
 }
@@ -69,7 +81,33 @@ main #sider ul:nth-last-of-type(1) {
   padding-top: 39px;
 }
 main #sider ul li {
-  padding: 24px 0 15px 20px;
+  margin: 10px 0 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+}
+main #sider ul li:nth-of-type(1):hover {
+  border: unset;
+}
+main #sider ul li:hover {
+  border: 1px solid white;
+}
+main #sider ul .log-out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 250px 0 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  padding: 5px;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+}
+main #sider ul .log-out:hover {
+  border: 1px solid white;
 }
 main #container {
   display: flex;
@@ -88,7 +126,7 @@ main #container #page_title {
 main #container {
   width: 778px;
   height: 749px;
-  margin-top: 6%;
+  margin-top: 7%;
 }
 main #container #content {
   display: flex;
@@ -97,7 +135,7 @@ main #container #content {
   align-items: flex-start;
   width: 1100px;
   height: 965px;
-  margin: 44px 0 132px;
+  margin: 0 0 132px;
 }
 main #container #content .card {
   width: 984px;

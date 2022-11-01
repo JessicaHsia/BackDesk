@@ -39,14 +39,18 @@ main {
                     margin-left: 30px;
                     background-color: $input;
 
-                    &:nth-of-type(2) {
-                        @include dimension(720px, 200px);
-                        margin: 17px 0 28px 30px;
-                    }
-
                     &:nth-last-of-type(1) {
                         margin: 19px 0 30px 30px;
                     }
+                }
+
+                textarea {
+                    @include dimension(720px, 200px);
+                    margin: 17px 0 28px 30px;
+                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    background-color: $input;
+                    @include font(400, 16px, 19px, 0.1em);
+                    border: unset;
                 }
             }
 
@@ -62,11 +66,16 @@ main {
                         margin: 0 22px 0 20px;
                     }
 
-                    button {
+                    .input-file {
                         @include dimension(70px, 40px);
                         @include font(400, 20px, 24px, 0.1em);
+                        transform: translateY(-60%);
                         box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
-                        border: unset;
+                        @include flex-row(center, center);
+                        background-color: $button;
+                        input{
+                            display: none;
+                        }
                     }
 
                     #phone {

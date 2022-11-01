@@ -13,8 +13,15 @@ main {
         @include font(400, 20px, 24px, 0.1em);
         position: fixed;
         z-index: 99999;
+        img{
+            @include dimension(150px, 150px);
+            margin-top: 66px;
+        }
 
         ul {
+            @include flex-col(flex-start, flex-start);
+            width: 150px;
+
             &:nth-of-type(1) {
                 padding-top: 78px;
             }
@@ -24,15 +31,39 @@ main {
             }
 
             li {
-                margin: 24px 0 15px 20px;
+                &:nth-of-type(1) {
+                    margin-left: 0;
+                    &:hover {
+                        border: unset;
+                    }
+                }
+
+
+                margin: 10px 0 10px 20px;
                 border-radius: 10px;
                 text-align: center;
-                &:hover{
+                padding: 5px;
+
+                &:hover {
                     border: 1px solid white;
-                    // padding: 5px;
+
+                }
+            }
+
+            .log-out {
+                @include flex-row(center, center);
+                margin: 250px 0 0;
+                @include font(400, 20px, 24px, 0.1em);
+                padding: 5px;
+                border-radius: 20px;
+                @include dimension(150px, 40px);
+                &:hover {
+                    border: 1px solid white;
+
                 }
             }
         }
+
     }
 
     #container {

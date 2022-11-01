@@ -5,12 +5,12 @@
 main {
     #container {
         @include dimension(778px, 749px);
-        margin-top: 6%;
+        margin-top: 7%;
 
         #content {
             @include flex-col(flex-start, flex-start);
             @include dimension(1100px, 965px);
-            margin: 44px 0 132px;
+            margin: 0 0 132px;
 
             .card {
                 @include dimension(984px, 244px);

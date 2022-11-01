@@ -13,14 +13,17 @@
 
     <main>
         <div id="sider">
-            <ul>首頁 >
+            <img src="./img/logo-bg-white.png" >
+            <ul>
+                <li>首頁 ></li>
                 <li>banner</li>
                 <li><a href="./new-product.html">新品上市</a></li>
             </ul>
-            <ul>活動快訊 >
+            <ul>
+                <li>活動快訊 ></li>
                 <li><a href="./newslist.html">列表頁</a> </li>
                 <li><a href="./news-add.html">新增消息</a> </li>
-                <li><a href="./index.html">登出</a></li>
+                <a class="log-out" href="./index.html">登出後台</a>
             </ul>
         </div>
 
@@ -32,19 +35,25 @@
                 <div>swiper 1</div>
                 <div>swiper 2</div>
             </div>
-            <div id="content">
+            <form id="content">
                 <li>！網頁版建議尺寸為 500px X 350 px</li>
                 <div id="web">
                     <div class="box"></div>
-                    <button>瀏覽</button>
+                    <label class="input-file">
+                        <input type="file" name="newsadd_webbtn">
+                        <span>瀏覽</span>
+                    </label>
                 </div>
                 <li>！手機版建議尺寸為 500px X 350 px</li>
                 <div id="phone">
                     <div class="box"></div>
-                    <button>瀏覽</button>
+                    <label class="input-file">
+                        <input type="file" name="newsadd_phonebtn">
+                        <span>瀏覽</span>
+                    </label>
                     <button>上傳</button>
                 </div>
-            </div>
+            </form>
         </div>
     </main>
 

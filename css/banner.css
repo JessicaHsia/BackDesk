@@ -62,6 +62,18 @@ main #sider {
   position: fixed;
   z-index: 99999;
 }
+main #sider img {
+  width: 150px;
+  height: 150px;
+  margin-top: 66px;
+}
+main #sider ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 150px;
+}
 main #sider ul:nth-of-type(1) {
   padding-top: 78px;
 }
@@ -69,7 +81,33 @@ main #sider ul:nth-last-of-type(1) {
   padding-top: 39px;
 }
 main #sider ul li {
-  padding: 24px 0 15px 20px;
+  margin: 10px 0 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+}
+main #sider ul li:nth-of-type(1):hover {
+  border: unset;
+}
+main #sider ul li:hover {
+  border: 1px solid white;
+}
+main #sider ul .log-out {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 250px 0 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  padding: 5px;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+}
+main #sider ul .log-out:hover {
+  border: 1px solid white;
 }
 main #container {
   display: flex;
@@ -146,7 +184,23 @@ main #container #content #web button {
   letter-spacing: 0.1em;
   background-color: #EFEFEF;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
-  border: unset;
+}
+main #container #content #web .input-file {
+  width: 70px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  transform: translateY(-60%);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFEFEF;
+}
+main #container #content #web .input-file input {
+  display: none;
 }
 main #container #content #phone {
   display: flex;
@@ -173,4 +227,21 @@ main #container #content #phone button {
 }
 main #container #content #phone button:nth-last-of-type(1) {
   background-color: #EEB8AF;
+}
+main #container #content #phone .input-file {
+  width: 70px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  transform: translateY(-60%);
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFEFEF;
+}
+main #container #content #phone .input-file input {
+  display: none;
 }/*# sourceMappingURL=banner.css.map */
