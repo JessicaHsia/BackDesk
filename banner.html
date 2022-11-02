@@ -38,31 +38,38 @@
             <form id="content">
                 <li>！網頁版建議尺寸為 500px X 350 px</li>
                 <div id="web">
-                    <div class="box"></div>
+                    <div class="web-box1"><img src="./img/IMG_2021.JPG" alt=""></div>
+                    <div class="web-box2"><img src="./img/webbox-test2.JPG" alt=""></div>
                     <label class="web-input-file1">
-                        <input type="file" name="newsadd_webbtn" accept="image/*" id="input_file_up"
+                        <input type="file" name="newsadd_webbtn" accept="image/*" id="webinput1_area"
                             multiple="multiple">
                         <span>瀏覽</span>
                     </label>
+                    <p class="web-input-file1-name"></p>
                     <label class="web-input-file2">
-                        <input type="file" name="newsadd_webbtn" accept="image/*" id="input_file_up"
+                        <input type="file" name="newsadd_webbtn" accept="image/*" id="webinput2_area"
                             multiple="multiple">
                         <span>瀏覽</span>
                     </label>
+                    <p class="web-input-file2-name"></p>
+
                 </div>
                 <li>！手機版建議尺寸為 500px X 350 px</li>
                 <div id="phone">
-                    <div class="box"></div>
+                    <div class="phone-box1"><img src="./img/phonebox-test1.JPG" alt=""></div>
+                    <div class="phone-box2"><img src="./img/phonebox-test2.JPG" alt=""></div>
                     <label class="phone-input-file1">
-                        <input type="file" name="newsadd_webbtn" accept="image/*" id="input_file_up"
+                        <input type="file" name="newsadd_webbtn" accept="image/*" id="phoneinput1_area"
                             multiple="multiple">
                         <span>瀏覽</span>
                     </label>
+                    <p class="phone-input-file1-name"></p>
                     <label class="phone-input-file2">
-                        <input type="file" name="newsadd_webbtn" accept="image/*" id="input_file_up"
+                        <input type="file" name="newsadd_webbtn" accept="image/*" id="phoneinput2_area"
                             multiple="multiple">
                         <span>瀏覽</span>
                     </label>
+                    <p class="phone-input-file2-name"></p>
                     <button>上傳</button>
                 </div>
             </form>
@@ -72,18 +79,34 @@
     <script>
         const swiperTag1 = document.getElementById('swiper_tag1');
         const swiperTag2 = document.getElementById('swiper_tag2');
-        const inputfile = document.getElementById('input_file_up');
+
         const webInput1 = document.querySelector('.web-input-file1');
         const webInput2 = document.querySelector('.web-input-file2');
         const phoneInput1 = document.querySelector('.phone-input-file1');
         const phoneInput2 = document.querySelector('.phone-input-file2');
-        var files = inputfile.files;
-        var fileLists = [];
 
-        // console.log(swiperTag1, swiperTag2);
+        const webBox1 = document.querySelector('.web-box1');
+        const webBox2 = document.querySelector('.web-box2');
+        const phoneBox1 = document.querySelector('.phone-box1');
+        const phoneBox2 = document.querySelector('.phone-box2');
+
+        const webInputArea1 = document.getElementById('webinput1_area');
+        const webInputArea2 = document.getElementById('webinput2_area');
+        const phoneInputArea1 = document.getElementById('phoneinput1_area');
+        const phoneInputArea2 = document.getElementById('phoneinput2_area');
+
+        const webFileName1 = document.querySelector('.web-input-file1-name');
+        const webFileName2 = document.querySelector('.web-input-file2-name');
+        const phoneFileName1 = document.querySelector('.phone-input-file1-name');
+        const phoneFileName2 = document.querySelector('.phone-input-file2-name');
+
+        
+
+
+        
         swiperTag2.style.backgroundColor = 'white';
         swiperTag1.style.backgroundColor = 'rgb(141, 215, 204)';
-        // console.log(files, swiperTag2.style.backgroundColor, swiperTag1.style.backgroundColor);
+
         swiperTag2.addEventListener('click', function () {
             swiperTag1.style.backgroundColor = 'white';
             swiperTag2.style.backgroundColor = 'rgb(141, 215, 204)';
@@ -91,6 +114,14 @@
             webInput2.classList.add('onbtn');
             phoneInput1.classList.add('offbtn');
             phoneInput2.classList.add('onbtn');
+            phoneBox1.classList.add('offbtn');
+            phoneBox2.classList.add('onbtn');
+            webBox1.classList.add('offbtn');
+            webBox2.classList.add('onbtn');
+            webFileName1.classList.add('offbtn');
+            webFileName2.classList.add('onbtn');
+            phoneFileName1.classList.add('offbtn');
+            phoneFileName2.classList.add('onbtn');
         })
         swiperTag1.addEventListener('click', function () {
             swiperTag2.style.backgroundColor = 'white';
@@ -99,8 +130,48 @@
             webInput2.classList.remove('onbtn');
             phoneInput1.classList.remove('offbtn');
             phoneInput2.classList.remove('onbtn');
+            phoneBox1.classList.remove('offbtn');
+            phoneBox2.classList.remove('onbtn');
+            webBox1.classList.remove('offbtn');
+            webBox2.classList.remove('onbtn');
+            webFileName1.classList.remove('offbtn');
+            webFileName2.classList.remove('onbtn');
+            phoneFileName1.classList.remove('offbtn');
+            phoneFileName2.classList.remove('onbtn');
         })
 
+        webInputArea1.addEventListener('change', function () {
+            var files = webInputArea1.files[0].name;
+            webFileName1.innerHTML = 
+            `
+            <p>${files}</p>
+            `
+            console.log(files);
+        });
+        webInputArea2.addEventListener('change', function () {
+            var files = webInputArea2.files[0].name;
+            webFileName2.innerHTML = 
+            `
+            <p>${files}</p>
+            `
+            console.log(files);
+        });
+        phoneInputArea1.addEventListener('change', function () {
+            var files = phoneInputArea1.files[0].name;
+            phoneFileName1.innerHTML = 
+            `
+            <p>${files}</p>
+            `
+            console.log(files);
+        });
+        phoneInputArea2.addEventListener('change', function () {
+            var files = phoneInputArea2.files[0].name;
+            phoneFileName2.innerHTML = 
+            `
+            <p>${files}</p>
+            `
+            console.log(files);
+        });
 
 
         // inputfile.addEventListener('change', function () {
