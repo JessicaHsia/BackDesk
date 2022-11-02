@@ -13,7 +13,7 @@
 
     <main>
         <div id="sider">
-            <img src="./img/logo-bg-white.png" >
+            <img src="./img/logo-bg-white.png">
             <ul>
                 <li>首頁 ></li>
                 <li>banner</li>
@@ -32,23 +32,35 @@
                 <span>首頁</span> / <span> banner</span>
             </div>
             <div id="swiper_tag">
-                <div>swiper 1</div>
-                <div>swiper 2</div>
+                <div id="swiper_tag1">swiper 1</div>
+                <div id="swiper_tag2">swiper 2</div>
             </div>
             <form id="content">
                 <li>！網頁版建議尺寸為 500px X 350 px</li>
                 <div id="web">
                     <div class="box"></div>
-                    <label class="input-file">
-                        <input type="file" name="newsadd_webbtn">
+                    <label class="web-input-file1">
+                        <input type="file" name="newsadd_webbtn" accept="image/*" id="input_file_up"
+                            multiple="multiple">
+                        <span>瀏覽</span>
+                    </label>
+                    <label class="web-input-file2">
+                        <input type="file" name="newsadd_webbtn" accept="image/*" id="input_file_up"
+                            multiple="multiple">
                         <span>瀏覽</span>
                     </label>
                 </div>
                 <li>！手機版建議尺寸為 500px X 350 px</li>
                 <div id="phone">
                     <div class="box"></div>
-                    <label class="input-file">
-                        <input type="file" name="newsadd_phonebtn">
+                    <label class="phone-input-file1">
+                        <input type="file" name="newsadd_webbtn" accept="image/*" id="input_file_up"
+                            multiple="multiple">
+                        <span>瀏覽</span>
+                    </label>
+                    <label class="phone-input-file2">
+                        <input type="file" name="newsadd_webbtn" accept="image/*" id="input_file_up"
+                            multiple="multiple">
                         <span>瀏覽</span>
                     </label>
                     <button>上傳</button>
@@ -56,6 +68,65 @@
             </form>
         </div>
     </main>
+
+    <script>
+        const swiperTag1 = document.getElementById('swiper_tag1');
+        const swiperTag2 = document.getElementById('swiper_tag2');
+        const inputfile = document.getElementById('input_file_up');
+        const webInput1 = document.querySelector('.web-input-file1');
+        const webInput2 = document.querySelector('.web-input-file2');
+        const phoneInput1 = document.querySelector('.phone-input-file1');
+        const phoneInput2 = document.querySelector('.phone-input-file2');
+        var files = inputfile.files;
+        var fileLists = [];
+
+        // console.log(swiperTag1, swiperTag2);
+        swiperTag2.style.backgroundColor = 'white';
+        swiperTag1.style.backgroundColor = 'rgb(141, 215, 204)';
+        // console.log(files, swiperTag2.style.backgroundColor, swiperTag1.style.backgroundColor);
+        swiperTag2.addEventListener('click', function () {
+            swiperTag1.style.backgroundColor = 'white';
+            swiperTag2.style.backgroundColor = 'rgb(141, 215, 204)';
+            webInput1.classList.add('offbtn');
+            webInput2.classList.add('onbtn');
+            phoneInput1.classList.add('offbtn');
+            phoneInput2.classList.add('onbtn');
+        })
+        swiperTag1.addEventListener('click', function () {
+            swiperTag2.style.backgroundColor = 'white';
+            swiperTag1.style.backgroundColor = 'rgb(141, 215, 204)';
+            webInput1.classList.remove('offbtn');
+            webInput2.classList.remove('onbtn');
+            phoneInput1.classList.remove('offbtn');
+            phoneInput2.classList.remove('onbtn');
+        })
+
+
+
+        // inputfile.addEventListener('change', function () {
+
+        //     if (files.length == 0 && swiperTag2.style.backgroundColor == 'white') {
+        //         files = inputfile.files; 
+        //         fileLists[0] = files;
+        //         console.log(fileLists);
+        //     } else if (files.length == 0 && swiperTag1.style.backgroundColor == 'white') {
+        //         files = inputfile.files;
+        //         fileLists[0] = '';
+        //         fileLists[1] = files;
+        //         console.log(fileLists)
+        //     } else if (files.length == 1 && swiperTag2.style.backgroundColor == 'white') {
+        //         files = inputfile.files; 
+        //         fileLists[0] = files;
+        //         console.log(fileLists);
+        //     } else if (files.length == 1 && swiperTag1.style.backgroundColor == 'white') {
+        //         files = inputfile.files;
+        //         fileLists[1] = files;
+        //         console.log(fileLists)
+
+        //     }
+        // });
+
+    </script>
 
 </body>
 
