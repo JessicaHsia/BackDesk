@@ -3,20 +3,23 @@
 //banner內文開始
 
 
-main{
-    #container{
+main {
+    #container {
         @include dimension(778px, 749px);
-        #swiper_tag{
+
+        #swiper_tag {
             @include flex-row(flex-start, center);
             @include font(400, 16px, 19px, 0.1em);
             margin-top: 28px;
-            div{
+
+            div {
                 @include dimension(100px, 35px);
                 @include flex-row(center, center);
                 border-radius: 10px 10px 0px 0px;
                 border: 1px solid $border;
                 border-bottom: unset;
             }
+
             // #swiper_tag1{
             //     background-color: $logo_color;
             // }
@@ -24,73 +27,131 @@ main{
             //     background-color: white;
             // }
         }
-        #content{
+
+        #content {
             @include dimension(100%, 749px);
             border: 1px solid $border;
             padding: 37px 0 0 34px;
-    
+
             li {
                 @include font(400, 18px, 22px, 0.1em);
                 padding-bottom: 14px;
             }
-            #web{
+
+            #web {
                 @include flex-row(flex-start, flex-end);
                 margin-bottom: 33px;
-                .box{
+
+                .box {
                     @include dimension(500px, 298px);
                     background-color: $bg;
                     margin-right: 37px;
                 }
-                button{
+
+                button {
                     @include dimension(70px, 40px);
                     @include font(400, 20px, 24px, 0.1em);
                     background-color: $button;
                     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
                     // border: unset;
                 }
-                .input-file {
+
+                .web-input-file1 {
                     @include dimension(70px, 40px);
                     @include font(400, 20px, 24px, 0.1em);
                     transform: translateY(-60%);
                     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
                     @include flex-col(center, center);
                     background-color: $button;
-                    input{
+
+                    input {
                         // display: none;
                     }
                 }
-            }
-            #phone{
-                @include flex-row(space-between, flex-end);
-                padding-right: 43px;
-                padding: 0 43px 29px 0;
-                .box{
-                    @include dimension(192px, 289px);
-                    background-color: $bg;
-                }
-                button{
-                    @include dimension(70px, 40px);
-                    @include font(400, 20px, 24px, 0.1em);
-                    background-color: $button;
-                    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
-                    &:nth-last-of-type(1){
-                        background-color: $sub_color;
-                    }
-                    border: unset;
-                }
-                .input-file {
+
+                .web-input-file2 {
+                    display: none;
                     @include dimension(70px, 40px);
                     @include font(400, 20px, 24px, 0.1em);
                     transform: translateY(-60%);
                     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
-                    @include flex-row(center, center);
                     background-color: $button;
-                    input{
+
+                    input {
+                        // display: none;
+                    }
+                }
+
+                .offbtn {
+                    display: none;
+                }
+
+                .onbtn {
+                    @include flex-col(center, center);
+                }
+
+            }
+      
+            #phone {
+                @include flex-row(space-between, flex-end);
+                padding-right: 43px;
+                padding: 0 43px 29px 0;
+
+                .box {
+                    @include dimension(192px, 289px);
+                    background-color: $bg;
+                }
+
+                button {
+                    @include dimension(70px, 40px);
+                    @include font(400, 20px, 24px, 0.1em);
+                    background-color: $button;
+                    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+
+                    &:nth-last-of-type(1) {
+                        background-color: $sub_color;
+                    }
+
+                    border: unset;
+                }
+
+                .phone-input-file1 {
+                    @include dimension(70px, 40px);
+                    @include font(400, 20px, 24px, 0.1em);
+                    transform: translateY(-60%);
+                    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+                    @include flex-col(center, center);
+                    background-color: $button;
+
+                    input {
                         display: none;
                     }
+                }
+
+                .phone-input-file2 {
+                    display: none;
+                    @include dimension(70px, 40px);
+                    @include font(400, 20px, 24px, 0.1em);
+                    transform: translateY(-60%);
+                    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+                    background-color: $button;
+
+                    input {
+                        display: none;
+                    }
+                }
+
+                .offbtn {
+                    display: none;
+                }
+
+                .onbtn {
+                    @include flex-col(center, center);
                 }
             }
         }
     }
-    
+
+
 }
+
