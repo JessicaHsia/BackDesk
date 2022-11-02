@@ -46,6 +46,8 @@ main {
 
                 textarea {
                     @include dimension(720px, 200px);
+                    max-width: 720px;
+                    max-height: 200px;
                     margin: 17px 0 28px 30px;
                     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
                     background-color: $input;
