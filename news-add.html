@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- include libraries bootstrap-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <!-- body css -->
     <link rel="stylesheet" href="./css/news-add.css">
     <link rel="stylesheet" href="./css/sider.css">
     <title>菓洞甜點工作室-新增消息</title>
@@ -14,7 +19,7 @@
 
     <main>
         <div id="sider">
-            <img src="./img/logo-bg-white.png" >
+            <img src="./img/logo-bg-white.png">
             <ul>
                 <li>首頁 ></li>
                 <li><a href="./banner.html">banner</a> </li>
@@ -42,7 +47,7 @@
                     <li>標題<span>*</span></li>
                     <input type="text" name="newsadd_title">
                     <li>內文</li>
-                    <textarea cols="30" rows="10" name="newsadd_textarea"></textarea>
+                    <textarea cols="30" rows="10" name="newsadd_textarea" id="summernote"></textarea>
                 </div>
                 <div class="content-right">
                     <li>上傳列表圖 <span>*</span></li>
@@ -67,6 +72,26 @@
             </form>
         </div>
     </main>
+
+    <!-- include libraries (jQuery, bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- include summernote js -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#summernote').summernote({
+                toolbar: [
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'underline']],
+                    ['font', ['fontname']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'paragraph']],
+                    ['insert', ['link', 'picture']],
+                ]
+            });
+        });
+    </script>
 
 </body>
 

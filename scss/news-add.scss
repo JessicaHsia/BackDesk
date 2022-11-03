@@ -44,10 +44,11 @@ main {
                 }
 
                 .input_date {
-                    span{
+                    span {
                         margin-left: 30px;
                         font-size: 20px
                     }
+
                     input {
                         @include dimension(120px, 40px);
                         background-color: $input;
@@ -55,15 +56,17 @@ main {
                     }
                 }
 
-                textarea {
+                .note-editor{
+                    left: 30px;
+                }
+
+                .note-editor.note-airframe,
+                .note-editor.note-frame {
                     @include dimension(720px, 530px);
-                    max-width: 720px;
-                    max-height: 530px;
-                    margin-left: 30px;
-                    background-color: $input;
-                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-                    font-size: 20px;
-                    border: unset;
+                    margin: unset;
+                }
+                .note-editor.note-airframe .note-editing-area .note-editable, .note-editor.note-frame .note-editing-area .note-editable{
+                    height: 470px;
                 }
 
             }
