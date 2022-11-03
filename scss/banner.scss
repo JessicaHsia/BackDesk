@@ -42,24 +42,27 @@ main {
                 @include flex-row(flex-start, flex-end);
                 margin-bottom: 33px;
 
-                .web-box1{
-                    img{
+                .web-box1 {
+                    img {
                         @include dimension(500px, 298px);
                         object-fit: cover;
                         object-position: center;
                     }
+
                     @include dimension(500px, 298px);
                     background-color: $bg;
                     margin-right: 37px;
                     object-fit: cover;
                     object-position: center;
                 }
-                .web-box2{
-                    img{
+
+                .web-box2 {
+                    img {
                         @include dimension(500px, 298px);
                         object-fit: cover;
                         object-position: center;
                     }
+
                     display: none;
                     @include dimension(500px, 298px);
                     background-color: $sub_color;
@@ -91,23 +94,27 @@ main {
                         display: none;
                     }
                 }
-                
-                .web-input-file1-name{
-                   transform: translateX(10%);
-                    p{
+
+                .web-input-file1-name {
+                    transform: translateX(10%);
+
+                    p {
                         @include dimension(200px, 30px);
-                        word-wrap:break-word;
-                     }
+                        word-wrap: break-word;
+                    }
                 }
-                .web-input-file2-name{
+
+                .web-input-file2-name {
                     transform: translateX(10%);
                     display: none;
-                    p{
+
+                    p {
                         @include dimension(200px, 30px);
-                        word-wrap:break-word;
-                     }
-                    
+                        word-wrap: break-word;
+                    }
+
                 }
+
                 .offbtn {
                     display: none;
                 }
@@ -117,44 +124,37 @@ main {
                 }
 
             }
-            
-      
+
+
             #phone {
-                @include flex-row(space-between, flex-end);
-                padding-right: 43px;
+                display: flex;
+                align-items: flex-end;
+                flex-direction: row;
                 padding: 0 43px 29px 0;
 
-                .phone-box1{
-                    img{
+                .phone-box1,
+                .phone-box2 {
+                    img {
                         @include dimension(192px, 289px);
                         object-fit: cover;
                         object-position: center;
                     }
+
                     @include dimension(192px, 289px);
-                    background-color: $bg;
+                    margin-right: 30px;
                 }
-                .phone-box2{
-                    img{
-                        @include dimension(192px, 289px);
-                        object-fit: cover;
-                        object-position: center;
-                    }
+
+                .phone-box2 {
                     display: none;
-                    @include dimension(192px, 289px);
-                    background-color: $sub_color;
                 }
 
                 button {
                     @include dimension(70px, 40px);
                     @include font(400, 20px, 24px, 0.1em);
-                    background-color: $button;
                     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
-
-                    &:nth-last-of-type(1) {
-                        background-color: $sub_color;
-                    }
-
+                    background-color: $sub_color;
                     border: unset;
+                    transform: translate(550%, -60%);
                 }
 
                 .phone-input-file1 {
@@ -182,36 +182,38 @@ main {
                         display: none;
                     }
                 }
-                
-                .phone-input-file1-name{
-                    transform: translateX(-50%);
-                    p{
-                        @include dimension(200px, 30px);
-                        word-wrap:break-word;
-                     }
-                 }
-                 .phone-input-file2-name{
-                     transform: translateX(-50%);
-                     display: none;
-                     p{
-                        @include dimension(200px, 30px);
-                        word-wrap:break-word;
-                     }
-                 }
 
-                 .offbtn {
+                .phone-input-file1-name {
+                    transform: translate(10%, 30%);
+
+                    p {
+                        @include dimension(200px, 30px);
+                        word-wrap: break-word;
+                    }
+                }
+
+                .phone-input-file2-name {
+                    transform: translate(10%, 30%);
+                    display: none;
+
+                    p {
+                        @include dimension(200px, 30px);
+                        word-wrap: break-word;
+                    }
+                }
+
+                .offbtn {
                     display: none;
                 }
 
                 .onbtn {
                     @include flex-col(center, center);
                 }
-                
+
             }
-            
+
         }
     }
 
 
 }
-

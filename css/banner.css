@@ -257,17 +257,18 @@ main #container #content #web .onbtn {
 }
 main #container #content #phone {
   display: flex;
-  justify-content: space-between;
   align-items: flex-end;
-  padding-right: 43px;
+  flex-direction: row;
   padding: 0 43px 29px 0;
 }
-main #container #content #phone .phone-box1 {
+main #container #content #phone .phone-box1,
+main #container #content #phone .phone-box2 {
   width: 192px;
   height: 289px;
-  background-color: #D9D9D9;
+  margin-right: 30px;
 }
-main #container #content #phone .phone-box1 img {
+main #container #content #phone .phone-box1 img,
+main #container #content #phone .phone-box2 img {
   width: 192px;
   height: 289px;
   object-fit: cover;
@@ -275,15 +276,6 @@ main #container #content #phone .phone-box1 img {
 }
 main #container #content #phone .phone-box2 {
   display: none;
-  width: 192px;
-  height: 289px;
-  background-color: #EEB8AF;
-}
-main #container #content #phone .phone-box2 img {
-  width: 192px;
-  height: 289px;
-  object-fit: cover;
-  object-position: center;
 }
 main #container #content #phone button {
   width: 70px;
@@ -292,12 +284,10 @@ main #container #content #phone button {
   font-size: 20px;
   line-height: 24px;
   letter-spacing: 0.1em;
-  background-color: #EFEFEF;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
-  border: unset;
-}
-main #container #content #phone button:nth-last-of-type(1) {
   background-color: #EEB8AF;
+  border: unset;
+  transform: translate(550%, -60%);
 }
 main #container #content #phone .phone-input-file1 {
   width: 70px;
@@ -333,7 +323,7 @@ main #container #content #phone .phone-input-file2 input {
   display: none;
 }
 main #container #content #phone .phone-input-file1-name {
-  transform: translateX(-50%);
+  transform: translate(10%, 30%);
 }
 main #container #content #phone .phone-input-file1-name p {
   width: 200px;
@@ -341,7 +331,7 @@ main #container #content #phone .phone-input-file1-name p {
   word-wrap: break-word;
 }
 main #container #content #phone .phone-input-file2-name {
-  transform: translateX(-50%);
+  transform: translate(10%, 30%);
   display: none;
 }
 main #container #content #phone .phone-input-file2-name p {

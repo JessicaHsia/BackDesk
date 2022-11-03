@@ -12,8 +12,9 @@ main {
             margin-top: 24px;
 
             .content-left {
-                @include dimension(778px, 870px);
+                @include dimension(778px, 850px);
                 border: 1px solid black;
+                padding: 0 30px;
 
                 li {
                     @include font(400, 18px, 22px, 0.1em);
@@ -23,56 +24,52 @@ main {
                     }
 
                     &:nth-of-type(1) {
-                        margin: 31px 0 19px 30px;
+                        margin: 31px 0 19px 0;
                     }
 
                     &:nth-of-type(2) {
-                        margin: 28px 0 21px 30px;
+                        margin: 28px 0 21px 0;
                     }
 
                     &:nth-of-type(3) {
-                        margin: 28px 0 16px 30px
+                        margin: 28px 0 16px 0
                     }
                 }
 
                 input {
                     @include dimension(720px, 50px);
                     background-color: $input;
-                    margin-left: 30px;
+                    // margin-left: 30px;
                     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
                     font-size: 16px;
                 }
 
                 .input_date {
                     span {
-                        margin-left: 30px;
+                        // margin-left: 30px;
                         font-size: 20px
                     }
 
                     input {
-                        @include dimension(120px, 40px);
+                        @include dimension(150px, 40px);
                         background-color: $input;
                         text-align: center;
+                        padding: 5px;
                     }
                 }
 
-                .note-editor{
-                    left: 30px;
-                }
-
-                .note-editor.note-airframe,
-                .note-editor.note-frame {
+                textarea {
                     @include dimension(720px, 530px);
-                    margin: unset;
-                }
-                .note-editor.note-airframe .note-editing-area .note-editable, .note-editor.note-frame .note-editing-area .note-editable{
-                    height: 470px;
+                    max-width: 720px;
+                    max-height: 530px;
+                    // margin-left: 30px;
+                    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    @include font(400, 18px, 22px, 0.1em);
                 }
 
             }
 
             .content-right {
-                @include dimension(375px, 100px);
                 margin: 0 180px 0 96px;
 
                 li {
@@ -83,34 +80,70 @@ main {
                     }
                 }
 
-                #web,
-                #phone {
+                #web {
 
-                    @include flex-row(space-between, flex-end);
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
 
                     .box {
                         @include dimension(283px, 206px);
                         background-color: $bg;
-
-                        &:nth-of-type(1) {
-                            margin: 21px 0 26px;
-                        }
-
-                        &:nth-of-type(2) {
-                            margin: 48px 0 26px;
-                        }
+                        margin: 21px 0 26px;
                     }
 
                     .input-file {
                         @include dimension(70px, 40px);
                         @include font(400, 20px, 24px, 0.1em);
-                        transform: translateY(-60%);
+                        transform: translate(50%, -60%);
                         box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
                         @include flex-row(center, center);
                         background-color: $button;
 
                         input {
                             display: none;
+                        }
+                    }
+
+                    .web-input-file-name {
+                        transform: translate(30%, 30%);
+
+                        p {
+                            @include dimension(200px, 30px);
+                            word-wrap: break-word;
+                        }
+                    }
+                }
+
+                #phone {
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+
+                    .box {
+                        @include dimension(283px, 206px);
+                        background-color: $bg;
+                        margin: 48px 0 26px;
+                    }
+                    .input-file {
+                        @include dimension(70px, 40px);
+                        @include font(400, 20px, 24px, 0.1em);
+                        transform: translate(50%, -60%);
+                        box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
+                        @include flex-row(center, center);
+                        background-color: $button;
+
+                        input {
+                            display: none;
+                        }
+                    }
+                    .phone-input-file-name {
+                        transform: translate(30%, 30%);
+
+                        p {
+                            @include dimension(200px, 30px);
+                            word-wrap: break-word;
                         }
                     }
                 }

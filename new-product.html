@@ -14,9 +14,9 @@
 
     <main>
         <div id="sider">
-            <img src="./img/logo-bg-white.png" >
+            <img src="./img/logo-bg-white.png">
             <ul>
-                <li>首頁 ></li> 
+                <li>首頁 ></li>
                 <li><a href="./banner.html">banner</a> </li>
                 <li>新品上市</li>
             </ul>
@@ -45,14 +45,16 @@
                     <div class="img-area">
                         <div id="web"></div>
                         <label class="input-file">
-                            <input type="file" name="newsadd_webbtn">
+                            <input type="file" name="newsadd_webbtn" id="webinput_area">
                             <span>瀏覽</span>
                         </label>
+                        <p class="web-input-file-name"></p>
                         <div id="phone"></div>
                         <label class="input-file">
-                            <input type="file" name="newsadd_webbtn">
+                            <input type="file" name="newsadd_webbtn" id="phoneinput_area">
                             <span>瀏覽</span>
                         </label>
+                        <p class="phone-input-file-name"></p>
                     </div>
                     <div class="text-area">
                         <li>！網頁版建議尺寸為 500px X 350 px</li>
@@ -63,7 +65,32 @@
             </form>
         </div>
     </main>
+    <script>
+        const webInputArea = document.getElementById('webinput_area');
+        const phoneInputArea = document.getElementById('phoneinput_area');
 
+        const webFileName = document.querySelector('.web-input-file-name');
+        const phoneFileName = document.querySelector('.phone-input-file-name');
+
+        webInputArea.addEventListener('change', function () {
+            var files = webInputArea.files[0].name;
+            webFileName.innerHTML = 
+            `
+            <p>${files}</p>
+            `
+            console.log(files);
+        });
+        phoneInputArea.addEventListener('change', function () {
+            var files = phoneInputArea.files[0].name;
+            phoneFileName.innerHTML = 
+            `
+            <p>${files}</p>
+            `
+            console.log(files);
+        });
+
+
+    </script>
 </body>
 
 </html>

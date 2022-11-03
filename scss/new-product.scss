@@ -83,13 +83,29 @@ main {
                     #phone {
                         @include dimension(206px, 206px);
                         background-color: $bg;
-                        margin: 0 22px 0 48px;
+                        margin: 0 22px 0 50px;
                     }
+
+                    .web-input-file-name{
+                        transform: translate(10%, 30%);
+                         p{
+                             @include dimension(200px, 30px);
+                             word-wrap:break-word;
+                          }
+                     }
+
+                    .phone-input-file-name{
+                        transform: translate(10%, 30%);
+                        p{
+                            @include dimension(200px, 30px);
+                            word-wrap:break-word;
+                         }
+                     }
                 }
 
                 .text-area {
                     @include flex-row(flex-start, flex-start);
-                    margin: 26px 0 0 20px;
+                    margin: 50px 0 0 20px;
 
                     li {
                         @include dimension(343px, 22px);
