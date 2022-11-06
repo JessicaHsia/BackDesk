@@ -188,6 +188,7 @@ main #container #content .content-left textarea {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.1em;
+  background-color: #F1F1F1;
 }
 main #container #content .content-right {
   margin: 0 180px 0 96px;
