@@ -75,3 +75,28 @@ main {
         }
     }
 }
+
+@media (max-width: 760px) {
+    main{
+        #sider{
+            @include dimension(120px, 100vh);
+            @include font(400, 12px, 24px, 0.1em);
+            @include flex-col(flex-start, center);
+            img{
+                @include dimension(50px, 50px);
+                margin-top: 66px;
+            }
+            ul{
+                width: 100px;
+            }
+        }
+        #container {
+            @include flex-col(center, flex-start);
+            transform: translate(20%, 23%);
+    
+            #page_title {
+                @include font(400, 12px, 22px, 0.1em);
+            }
+        }
+    }
+}

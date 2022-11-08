@@ -126,6 +126,41 @@ main #container #page_title {
   letter-spacing: 0.1em;
 }
 
+@media (max-width: 760px) {
+  main #sider {
+    width: 120px;
+    height: 100vh;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  main #sider img {
+    width: 50px;
+    height: 50px;
+    margin-top: 66px;
+  }
+  main #sider ul {
+    width: 100px;
+  }
+  main #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translate(20%, 23%);
+  }
+  main #container #page_title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+  }
+}
 main #container {
   width: 778px;
   height: 749px;
